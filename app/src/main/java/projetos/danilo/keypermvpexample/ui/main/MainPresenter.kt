@@ -1,4 +1,4 @@
 package projetos.danilo.keypermvpexample.ui.main
 
-class MainPresenter {
+class MainPresenter : MainContrato.Presenter {
 }
