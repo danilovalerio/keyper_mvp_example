@@ -21,8 +21,7 @@ class FrutasActivity : AppCompatActivity(), FrutasContrato.View {
         //iniciar presenter
         presenter = FrutasPresenter(this)
 
-        val lista = lista_frutas
-        lista.adapter = adapter
+        lista = lista_frutas
 
         //carregar frutas
         presenter.getFrutas()
