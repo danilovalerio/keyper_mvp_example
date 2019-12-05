@@ -28,5 +28,12 @@ class FrutasActivity : AppCompatActivity(), FrutasContrato.View {
         val lista = lista_frutas
         lista.adapter = adapter
 
+        //carregar frutas
+        presenter.getFrutas()
+
+    }
+
+    override fun mostraDados(frutas: Array<String>) {
+        adapter.addAll(frutas.toMutableList())
     }
 }
