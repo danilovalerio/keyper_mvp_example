@@ -17,12 +17,16 @@ class MainActivity : AppCompatActivity(), MainContrato.View {
         //inicializa presenter que terá nossa lógica, this é dependência é a view da camada contrato
         presenter = MainPresenter(this)
 
-        val nome = et_username.text.toString()
-        val senha = et_password.text.toString()
+
 
         btn_login.setOnClickListener{
-//            Toast.makeText(this,"Botão pressionado",Toast.LENGTH_SHORT).show()
-
+            val nome = et_username.text.toString()
+            val senha = et_password.text.toString()
+            presenter.loginClicado(nome, senha)
         }
+    }
+
+    override fun mostrarMensagem(texto: String) {
+        Toast.makeText(this,texto,Toast.LENGTH_SHORT).show()
     }
 }
