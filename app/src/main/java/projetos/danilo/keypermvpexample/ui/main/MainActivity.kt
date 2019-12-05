@@ -1,10 +1,12 @@
 package projetos.danilo.keypermvpexample.ui.main
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 import projetos.danilo.keypermvpexample.R
+import projetos.danilo.keypermvpexample.ui.frutas.FrutasActivity
 
 class MainActivity : AppCompatActivity(), MainContrato.View {
 
@@ -24,6 +26,10 @@ class MainActivity : AppCompatActivity(), MainContrato.View {
             val senha = et_password.text.toString()
             presenter.loginClicado(nome, senha)
         }
+    }
+
+    override fun iniciaAtividadeFrutas() {
+        startActivity(Intent(this, FrutasActivity::class.java))
     }
 
     override fun mostrarMensagem(texto: String) {

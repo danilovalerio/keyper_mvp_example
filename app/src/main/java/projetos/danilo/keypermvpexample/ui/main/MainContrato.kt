@@ -5,6 +5,8 @@ interface MainContrato {
     //para realizar a ligação entre View e Presenter
     interface View{
         fun mostrarMensagem(texto: String)
+
+        fun iniciaAtividadeFrutas()
     }
 
     interface Presenter{
